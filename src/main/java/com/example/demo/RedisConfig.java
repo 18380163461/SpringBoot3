@@ -10,7 +10,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * @Description: 防止redis 乱码
  * @author: youpd@asiainfo.com
- * @create: 2018-04-25 20:42
  */
 @Configuration
 public class RedisConfig {
