@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @Description:
  * @author: youpd@asiainfo.com
- * @create: 2018-04-25 10:59
+ * @create: 2018-04-25 19:59
  */
 public interface IuserService {
     List<User> findAll();

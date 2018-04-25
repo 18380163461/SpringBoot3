@@ -3,7 +3,7 @@ package com.example.demo.base;
 /**
  * @Description:
  * @author: youpd@asiainfo.com
- * @create: 2018-04-25 11:20
+ * @create: 2018-04-25 19:20
  */
 public class BaseResponse<T> {
     T result;

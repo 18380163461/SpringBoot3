@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * @Description:
  * @author: youpd@asiainfo.com
- * @create: 2018-04-25 10:51
+ * @create: 2018-04-25 19:51
  */
 @Entity
 public class User implements Serializable {
