@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.demo.base.BaseResponse;
 import com.example.demo.entity.User;
 import com.example.demo.service.IuserService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,7 @@ public class UserController {
     @Autowired
     IuserService userSerivce;
 
-    @RequestMapping("/test")
+    @GetMapping("/test")
     public BaseResponse test() {
         return new BaseResponse();
     }
@@ -31,6 +33,7 @@ public class UserController {
      * 查询所有
      *
      */
+    @ApiOperation(value="获取用户列表", notes="获取用户列表")
     @GetMapping("/")
     public BaseResponse gatAll() {
         List<User> users = userSerivce.findAll();
@@ -44,6 +47,8 @@ public class UserController {
      * 获取某个用户信息
      *
      */
+    @ApiOperation(value="获用户详细信息", notes="根据id来获取详细信息")
+    @ApiImplicitParam(name = "id", value = "id", required = true, dataType = "Long",paramType = "path")//如果请求参数在url上，@ApiImplicitParam 上加paramType = “path”
     @GetMapping("/{id}")
     public BaseResponse findUserById(@PathVariable Long id) {
         User user = userSerivce.findOne(id);
